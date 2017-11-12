@@ -55,9 +55,9 @@ public class IdeaListActivity extends AppCompatActivity {
         }
 
         IdeaService ideaService = ServiceBuilder.buildService(IdeaService.class);
-        Call<List<Idea>> call = ideaService.getIdeas();
+        Call<List<Idea>> request = ideaService.getIdeas("Jim");
 
-        call.enqueue(new Callback<List<Idea>>() {
+        request.enqueue(new Callback<List<Idea>>() {
             @Override
             public void onResponse(Call<List<Idea>> request, Response<List<Idea>> response) {
                 recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(response.body()));
