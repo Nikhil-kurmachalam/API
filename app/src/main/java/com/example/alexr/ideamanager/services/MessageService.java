@@ -6,6 +6,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Url;
 
 public interface MessageService {
-    @GET
-    Call<String> getMessages(@Url String url);
+    @GET("messages")
+    Call<String> getMessages();
 }
