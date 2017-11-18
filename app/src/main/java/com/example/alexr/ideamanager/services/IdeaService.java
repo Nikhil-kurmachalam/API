@@ -38,5 +38,5 @@ public interface IdeaService {
     );
 
     @DELETE("ideas/{id}")
-    Call<Idea> deleteIdea(@Path("id")int id);
+    Call<Void> deleteIdea(@Path("id")int id);
 }
