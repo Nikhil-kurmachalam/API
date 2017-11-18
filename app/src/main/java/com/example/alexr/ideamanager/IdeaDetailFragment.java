@@ -109,17 +109,17 @@ public class IdeaDetailFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 IdeaService ideaService = ServiceBuilder.buildService(IdeaService.class);
-                Call<Idea> request = ideaService.deleteIdea(getArguments().getInt(ARG_ITEM_ID));
+                Call<Void> deleteRequest = ideaService.deleteIdea(getArguments().getInt(ARG_ITEM_ID));
 
-                request.enqueue(new Callback<Idea>() {
+                deleteRequest.enqueue(new Callback<Void>() {
                     @Override
-                    public void onResponse(Call<Idea> request, Response<Idea> response) {
+                    public void onResponse(Call<Void> request, Response<Void> response) {
                         Intent intent = new Intent(context, IdeaListActivity.class);
                         startActivity(intent);
                     }
 
                     @Override
-                    public void onFailure(Call<Idea> request, Throwable t) {
+                    public void onFailure(Call<Void> request, Throwable t) {
                         Toast.makeText(context, "Failed to delete item.", Toast.LENGTH_SHORT).show();
                     }
                 });
