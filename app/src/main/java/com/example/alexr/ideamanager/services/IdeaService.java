@@ -20,9 +20,8 @@ import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 
 public interface IdeaService {
-    @Headers("x-device-type: Android")
     @GET("ideas")
-    Call<List<Idea>> getIdeas(@Header("Accept-Language") String language);
+    Call<List<Idea>> getIdeas();
 
     @GET("ideas/{id}")
     Call<Idea> getIdea(@Path("id")int id);

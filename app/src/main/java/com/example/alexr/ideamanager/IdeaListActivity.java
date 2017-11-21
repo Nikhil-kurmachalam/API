@@ -57,7 +57,7 @@ public class IdeaListActivity extends AppCompatActivity {
         }
 
         IdeaService ideaService = ServiceBuilder.buildService(IdeaService.class);
-        Call<List<Idea>> request = ideaService.getIdeas("en-US");
+        Call<List<Idea>> request = ideaService.getIdeas();
 
         request.enqueue(new Callback<List<Idea>>() {
             @Override
