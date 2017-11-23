@@ -27,14 +27,13 @@ public class ServiceBuilder {
                     .addInterceptor(new Interceptor() {
                         @Override
                         public Response intercept(Chain chain) throws IOException {
-                            Request requestChain = chain.request();
+                            Request request = chain.request();
 
-                            Request.Builder requestBuilder = requestChain.newBuilder()
+                            request = request.newBuilder()
                                     .addHeader("x-device-type", Build.DEVICE)
                                     .addHeader("Accept-Language", Locale.getDefault().getLanguage())
-                                    .method(requestChain.method(), requestChain.body());
+                                    .build();
 
-                            Request request = requestBuilder.build();
                             return chain.proceed(request);
                         }
                     })
