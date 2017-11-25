@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.alexr.ideamanager.helpers.SampleContent;
 import com.example.alexr.ideamanager.models.Idea;
@@ -18,6 +19,7 @@ import com.example.alexr.ideamanager.services.IdeaService;
 import com.example.alexr.ideamanager.services.MessageService;
 import com.example.alexr.ideamanager.services.ServiceBuilder;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,12 +64,22 @@ public class IdeaListActivity extends AppCompatActivity {
         request.enqueue(new Callback<List<Idea>>() {
             @Override
             public void onResponse(Call<List<Idea>> request, Response<List<Idea>> response) {
-                recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(response.body()));
+                if(response.isSuccessful()){
+                    recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(response.body()));
+                } else if(response.code() == 401) {
+                    Toast.makeText(context, "Your session has expired", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(context, "Failed to retrieve items", Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override
             public void onFailure(Call<List<Idea>> request, Throwable t) {
-                ((TextView)findViewById(R.id.message)).setText("Request Failed");
+                if (t instanceof IOException){
+                    Toast.makeText(context, "A connection error occured", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(context, "Failed to retrieve items", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

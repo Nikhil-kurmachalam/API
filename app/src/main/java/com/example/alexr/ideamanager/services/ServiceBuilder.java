@@ -1,7 +1,11 @@
 package com.example.alexr.ideamanager.services;
 
+import android.content.Intent;
 import android.os.Build;
 import android.widget.Toast;
+
+import com.example.alexr.ideamanager.IdeaCreateActivity;
+import com.example.alexr.ideamanager.LandingActivity;
 
 import java.io.IOException;
 import java.util.Locale;
