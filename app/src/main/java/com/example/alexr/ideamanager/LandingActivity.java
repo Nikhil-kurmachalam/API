@@ -1,6 +1,7 @@
 package com.example.alexr.ideamanager;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,24 +21,39 @@ public class LandingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
 
-        MessageService taskService = ServiceBuilder.buildService(MessageService.class);
-        Call<String> call = taskService.getMessages();
-
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> request, Response<String> response) {
-                ((TextView)findViewById(R.id.message)).setText(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<String> request, Throwable t) {
-                ((TextView)findViewById(R.id.message)).setText("Request Failed");
-            }
-        });
+        new GetMessagesTask().execute();
     }
 
     public void GetStarted(View view){
         Intent intent = new Intent(this, IdeaListActivity.class);
         startActivity(intent);
+    }
+
+    public class GetMessagesTask extends AsyncTask<Void, Void, Boolean> {
+
+        private String message = "";
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            MessageService taskService = ServiceBuilder.buildService(MessageService.class);
+            Call<String> call = taskService.getMessages();
+            try {
+                message = call.execute().body();
+            } catch (Exception e) {
+                // Todo
+            }
+
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            ((TextView) findViewById(R.id.message)).setText(message);
+        }
+
+        @Override
+        protected void onCancelled() {
+            // Todo
+        }
     }
 }
