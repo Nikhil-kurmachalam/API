@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.alexr.ideamanager.services.MessageService;
 import com.example.alexr.ideamanager.services.ServiceBuilder;
@@ -22,11 +23,6 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
 
         new GetMessagesTask().execute();
-    }
-
-    public void GetStarted(View view){
-        Intent intent = new Intent(this, IdeaListActivity.class);
-        startActivity(intent);
     }
 
     public class GetMessagesTask extends AsyncTask<Void, Void, Boolean> {
@@ -55,5 +51,10 @@ public class LandingActivity extends AppCompatActivity {
         protected void onCancelled() {
             // Todo
         }
+    }
+
+    public void GetStarted(View view){
+        Intent intent = new Intent(this, IdeaListActivity.class);
+        startActivity(intent);
     }
 }
