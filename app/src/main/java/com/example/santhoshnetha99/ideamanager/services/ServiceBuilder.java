@@ -1,11 +1,6 @@
-package com.example.alexr.ideamanager.services;
+package com.example.santhoshnetha99.ideamanager.services;
 
-import android.content.Intent;
 import android.os.Build;
-import android.widget.Toast;
-
-import com.example.alexr.ideamanager.IdeaCreateActivity;
-import com.example.alexr.ideamanager.LandingActivity;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -20,7 +15,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceBuilder {
-    private static final String URL = "http://10.0.2.2:9000/";
+    private static final String URL = "http://192.168.43.185:9000/";//localhost ip iam running it on my android mobile not on emulator
 
     // Create logger
     private static HttpLoggingInterceptor logger =

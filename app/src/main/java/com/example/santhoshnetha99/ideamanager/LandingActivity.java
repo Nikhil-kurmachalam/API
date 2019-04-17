@@ -1,4 +1,4 @@
-package com.example.alexr.ideamanager;
+package com.example.santhoshnetha99.ideamanager;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -6,14 +6,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.alexr.ideamanager.services.MessageService;
-import com.example.alexr.ideamanager.services.ServiceBuilder;
+import com.example.santhoshnetha99.ideamanager.services.MessageService;
+import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
 
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class LandingActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.alexr.ideamanager;
+package com.example.santhoshnetha99.ideamanager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,10 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.alexr.ideamanager.helpers.SampleContent;
-import com.example.alexr.ideamanager.models.Idea;
-import com.example.alexr.ideamanager.services.IdeaService;
-import com.example.alexr.ideamanager.services.ServiceBuilder;
+import com.example.santhoshnetha99.ideamanager.models.Idea;
+import com.example.santhoshnetha99.ideamanager.services.IdeaService;
+import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
 
 import retrofit2.Call;
 import retrofit2.Callback;

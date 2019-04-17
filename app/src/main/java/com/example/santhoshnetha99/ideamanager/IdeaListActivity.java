@@ -1,4 +1,4 @@
-package com.example.alexr.ideamanager;
+package com.example.santhoshnetha99.ideamanager;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,16 +13,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.alexr.ideamanager.helpers.SampleContent;
-import com.example.alexr.ideamanager.models.Idea;
-import com.example.alexr.ideamanager.services.IdeaService;
-import com.example.alexr.ideamanager.services.MessageService;
-import com.example.alexr.ideamanager.services.ServiceBuilder;
+import com.example.santhoshnetha99.ideamanager.models.Idea;
+import com.example.santhoshnetha99.ideamanager.services.IdeaService;
+import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;

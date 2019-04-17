@@ -1,9 +1,8 @@
-package com.example.alexr.ideamanager.services;
+package com.example.santhoshnetha99.ideamanager.services;
 
 
-import com.example.alexr.ideamanager.models.Idea;
+import com.example.santhoshnetha99.ideamanager.models.Idea;
 
-import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,12 +11,9 @@ import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
 
 public interface IdeaService {
     @GET("ideas")

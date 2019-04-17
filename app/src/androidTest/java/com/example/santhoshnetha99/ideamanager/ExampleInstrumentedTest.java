@@ -1,4 +1,4 @@
-package com.example.alexr.ideamanager;
+package com.example.santhoshnetha99.ideamanager;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
