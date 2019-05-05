@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.example.santhoshnetha99.taskmanager"
+        applicationId "com.example.komuravellycharan.studnetsgrades"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

@@ -1,4 +1,4 @@
-package com.example.santhoshnetha99.ideamanager;
+package com.example.komuravellycharan.studnetsgrades;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.santhoshnetha99.ideamanager.models.Idea;
-import com.example.santhoshnetha99.ideamanager.services.IdeaService;
-import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
+import com.example.komuravellycharan.studnetsgrades.models.Idea;
+import com.example.komuravellycharan.studnetsgrades.services.IdeaService;
+import com.example.komuravellycharan.studnetsgrades.services.ServiceBuilder;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,9 +25,11 @@ public class IdeaCreateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idea_create);
+
+        final Context mContext = this;
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
-        final Context mContext = this;
+
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();

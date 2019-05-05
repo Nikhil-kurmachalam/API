@@ -1,4 +1,4 @@
-package com.example.santhoshnetha99.ideamanager;
+package com.example.komuravellycharan.studnetsgrades;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.santhoshnetha99.ideamanager.models.Idea;
-import com.example.santhoshnetha99.ideamanager.services.IdeaService;
-import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
+import com.example.komuravellycharan.studnetsgrades.models.Idea;
+import com.example.komuravellycharan.studnetsgrades.services.IdeaService;
+import com.example.komuravellycharan.studnetsgrades.services.ServiceBuilder;
 
 import java.io.IOException;
 import java.util.List;

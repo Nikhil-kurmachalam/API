@@ -13,7 +13,7 @@
             android:id="@+id/idea_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="Product Name"
             android:inputType="textEmailAddress"
             android:maxLines="1" />
 
@@ -27,7 +27,7 @@
             android:id="@+id/idea_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
+            android:hint="category"
             android:imeOptions="actionUnspecified"
             android:inputType="textMultiLine"
             android:maxLines="5" />
@@ -42,7 +42,7 @@
             android:id="@+id/idea_owner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Owner"
+            android:hint="price"
             android:imeOptions="actionUnspecified" />
 
     </android.support.design.widget.TextInputLayout>
@@ -55,7 +55,7 @@
             android:id="@+id/idea_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Status"
+            android:hint="product id"
             android:imeOptions="actionUnspecified" />
 
     </android.support.design.widget.TextInputLayout>

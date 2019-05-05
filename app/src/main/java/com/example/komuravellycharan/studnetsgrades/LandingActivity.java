@@ -1,4 +1,4 @@
-package com.example.santhoshnetha99.ideamanager;
+package com.example.komuravellycharan.studnetsgrades;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.santhoshnetha99.ideamanager.services.MessageService;
-import com.example.santhoshnetha99.ideamanager.services.ServiceBuilder;
+import com.example.komuravellycharan.studnetsgrades.services.MessageService;
+import com.example.komuravellycharan.studnetsgrades.services.ServiceBuilder;
 
 import retrofit2.Call;
 

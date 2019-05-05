@@ -1,4 +1,4 @@
-package com.example.santhoshnetha99.ideamanager;
+package com.example.komuravellycharan.studnetsgrades;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,7 +1,7 @@
-package com.example.santhoshnetha99.ideamanager.services;
+package com.example.komuravellycharan.studnetsgrades.services;
 
 
-import com.example.santhoshnetha99.ideamanager.models.Idea;
+import com.example.komuravellycharan.studnetsgrades.models.Idea;
 
 import java.util.List;
 

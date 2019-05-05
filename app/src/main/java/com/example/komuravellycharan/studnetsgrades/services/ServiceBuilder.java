@@ -1,4 +1,4 @@
-package com.example.santhoshnetha99.ideamanager.services;
+package com.example.komuravellycharan.studnetsgrades.services;
 
 import android.os.Build;
 
@@ -15,13 +15,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceBuilder {
-    private static final String URL = "http://192.168.43.185:9000/";//localhost ip iam running it on my android mobile not on emulator
-
+    private static final String URL = "http://10.0.2.2:9000/";
     // Create logger
     private static HttpLoggingInterceptor logger =
             new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
-    // Create OkHttp Client
     private static OkHttpClient.Builder okHttp =
             new OkHttpClient.Builder()
                     .readTimeout(15, TimeUnit.SECONDS)
@@ -30,7 +28,7 @@ public class ServiceBuilder {
                         public Response intercept(Chain chain) throws IOException {
                             Request request = chain.request();
 
-                            request = request.newBuilder()
+                                request = request.newBuilder()
                                     .addHeader("x-device-type", Build.DEVICE)
                                     .addHeader("Accept-Language", Locale.getDefault().getLanguage())
                                     .build();
